@@ -35,10 +35,10 @@ const Header = () => {
           <div className="flex items-center gap-3">
             <img 
               src="/images/logo.png" 
-              alt="Nhà Xe Minh Đức" 
+              alt="Nhà Xe Minh Khôi" 
               className="h-12 w-auto object-contain"
             />
-            <span className="text-2xl font-bold text-navy">Nhà Xe Minh Đức</span>
+            <span className="text-2xl font-bold text-navy">Nhà Xe Minh Khôi</span>
           </div>
 
           {/* Desktop Menu */}
@@ -313,7 +313,7 @@ const AboutSection = () => {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img 
                   src="/images/xe_ghep.jpg" 
-                  alt="Dịch vụ xe ghép cao cấp - Nhà Xe Minh Đức" 
+                  alt="Dịch vụ xe ghép cao cấp - Nhà Xe Minh Khôi" 
                   className="w-full h-auto object-contain"
                 />
               </div>
@@ -713,14 +713,14 @@ const TestimonialSection = () => {
             </h2>
 
             <p className="text-lg lg:text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-              "Tại Nhà Xe Minh Đức, chúng tôi không đo lường thành công bằng số chuyến đi, mà 
+              "Tại Nhà Xe Minh Khôi, chúng tôi không đo lường thành công bằng số chuyến đi, mà 
               bằng nụ cười và sự an tâm của bạn khi xuống xe. Mỗi phản hồi của khách hàng đều 
               được chúng tôi lắng nghe và xử lý với tinh thần trách nhiệm cao nhất."
             </p>
 
             <div className="text-center">
               <div className="text-white font-bold text-xl mb-1">Giám Đốc Điều Hành</div>
-              <div className="text-gray-400">Nhà Xe Minh Đức</div>
+              <div className="text-gray-400">Nhà Xe Minh Khôi</div>
             </div>
           </div>
         </AnimatedSection>
@@ -740,10 +740,10 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-4">
               <img 
                 src="/images/logo.png" 
-                alt="Nhà Xe Minh Đức" 
+                alt="Nhà Xe Minh Khôi" 
                 className="h-12 w-auto object-contain"
               />
-              <h3 className="text-2xl font-bold">Nhà Xe Minh Đức</h3>
+              <h3 className="text-2xl font-bold">Nhà Xe Minh Khôi</h3>
             </div>
             <p className="text-gray-300 mb-6">
               Dịch vụ xe ghép và xe riêng cao cấp, kết nối Hà Nội - Nam Định
