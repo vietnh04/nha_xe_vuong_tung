@@ -67,6 +67,4 @@ Cập nhật số điện thoại và thông tin liên hệ trong:
 
 ## License
 
-© 2024 Nhà Xe Tú Linh. All rights reserved.
-© 2024 Nhà Xe Minh Đức. All rights reserved.
-© 2024 Nhà Xe Minh Khôi. All rights reserved.
+© 2026 Nhà Xe Minh Khôi. All rights reserved.
