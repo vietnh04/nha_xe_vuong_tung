@@ -2,6 +2,8 @@
 
 ## Logo chính (logo.jpeg)
 File logo chính của Nhà Xe Tú Linh đã được đặt tại: `logo.jpeg`
+File logo chính của Nhà Xe Minh Đức đã được đặt tại: `logo.jpeg`
+File logo chính của Nhà Xe Minh Khôi đã được đặt tại: `logo.jpeg`
 
 ### Vị trí sử dụng:
 1. **Favicon** - Icon ở tab trình duyệt

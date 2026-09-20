@@ -32,6 +32,8 @@
 <img 
   src="/images/about-cars.jpg" 
   alt="Đội xe cao cấp - Nhà Xe Tú Linh" 
+  alt="Đội xe cao cấp - Nhà Xe Minh Đức" 
+  alt="Đội xe cao cấp - Nhà Xe Minh Khôi" 
   className="w-full h-[500px] object-cover"
 />
 ```

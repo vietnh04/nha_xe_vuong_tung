@@ -1,4 +1,6 @@
 # Landing Page Nhà Xe Tú Linh
+# Landing Page Nhà Xe Minh Đức
+# Landing Page Nhà Xe Minh Khôi
 
 Website landing page dịch vụ xe ghép/xe tiện chuyến cao cấp kết nối Hà Nội - Nam Định, được xây dựng bằng React + TailwindCSS.
 
@@ -67,3 +69,5 @@ Cập nhật số điện thoại và thông tin liên hệ trong:
 ## License
 
 © 2024 Nhà Xe Tú Linh. All rights reserved.
+© 2024 Nhà Xe Minh Đức. All rights reserved.
+© 2024 Nhà Xe Minh Khôi. All rights reserved.

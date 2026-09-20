@@ -1,5 +1,7 @@
 {
   "name": "nha_xe_tu_linh",
+  "name": "nha_xe_minh_duc",
+  "name": "nha_xe_minh_khoi",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -35,10 +35,10 @@ const Header = () => {
           <div className="flex items-center gap-3">
             <img 
               src="/images/logo.png" 
-              alt="Nhà Xe Tú Linh" 
+              alt="Nhà Xe Minh Đức" 
               className="h-12 w-auto object-contain"
             />
-            <span className="text-2xl font-bold text-navy">Nhà Xe Tú Linh</span>
+            <span className="text-2xl font-bold text-navy">Nhà Xe Minh Đức</span>
           </div>
 
           {/* Desktop Menu */}
@@ -51,7 +51,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a href="tel:0853639779" className="bg-accent-red text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition shadow-lg">
+            <a href="tel:0942193389" className="bg-accent-red text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition shadow-lg">
               Liên Hệ
             </a>
           </div>
@@ -79,7 +79,7 @@ const Header = () => {
               <a href="#services" className="text-gray-700 hover:text-navy font-medium">Dịch vụ</a>
               <a href="#pricing" className="text-gray-700 hover:text-navy font-medium">Bảng giá</a>
               <a href="#contact" className="text-gray-700 hover:text-navy font-medium">Liên hệ</a>
-              <a href="tel:0853639779" className="bg-accent-red text-white px-6 py-3 rounded-full font-semibold text-center">
+              <a href="tel:0942193389" className="bg-accent-red text-white px-6 py-3 rounded-full font-semibold text-center">
                 Liên Hệ
               </a>
             </nav>
@@ -204,18 +204,18 @@ const HeroSection = () => {
             {/* CTA Buttons */}
             <div className="grid grid-cols-2 gap-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
               <a 
-                href="tel:0853639779" 
+                href="tel:0942193389" 
                 className="group relative bg-gradient-to-r from-accent-red to-red-600 text-white px-4 py-4 rounded-2xl font-bold text-base shadow-2xl flex items-center justify-center gap-2 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-accent-red/50"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-accent-red opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <svg className="w-5 h-5 relative z-10 group-hover:rotate-12 transition-transform flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                <span className="relative z-10">Gọi Ngay: 0853639779</span>
+                <span className="relative z-10">Gọi Ngay: 0942193389</span>
               </a>
               
               <a 
-                href="https://zalo.me/0853639779" 
+                href="https://zalo.me/0942193389" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="group bg-blue-500 hover:bg-blue-600 text-white px-4 py-4 rounded-2xl font-bold text-base transition-all duration-300 shadow-xl flex items-center justify-center gap-2 hover:scale-105"
@@ -313,7 +313,7 @@ const AboutSection = () => {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img 
                   src="/images/xe_ghep.jpg" 
-                  alt="Dịch vụ xe ghép cao cấp - Nhà Xe Tú Linh" 
+                  alt="Dịch vụ xe ghép cao cấp - Nhà Xe Minh Đức" 
                   className="w-full h-auto object-contain"
                 />
               </div>
@@ -632,7 +632,7 @@ const DetailedPricingSection = () => {
                     </p>
                   </div>
                   <a 
-                    href="tel:0853639779" 
+                    href="tel:0942193389" 
                     className="bg-accent-red text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition-all duration-300 shadow-lg hover:scale-105 whitespace-nowrap"
                   >
                     Đặt Xe Ngay
@@ -652,7 +652,7 @@ const DetailedPricingSection = () => {
                   </svg>
                 </div>
                 <h3 className="font-bold text-lg mb-2">Đặt Xe Nhanh</h3>
-                <p className="text-gray-200 text-sm">Gọi ngay 0853 639 779 để đặt xe và nhận ưu đãi</p>
+                <p className="text-gray-200 text-sm">Gọi ngay 0942 193 389 để đặt xe và nhận ưu đãi</p>
               </div>
             </AnimatedSection>
 
@@ -713,14 +713,14 @@ const TestimonialSection = () => {
             </h2>
 
             <p className="text-lg lg:text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-              "Tại Nhà Xe Tú Linh, chúng tôi không đo lường thành công bằng số chuyến đi, mà 
+              "Tại Nhà Xe Minh Đức, chúng tôi không đo lường thành công bằng số chuyến đi, mà 
               bằng nụ cười và sự an tâm của bạn khi xuống xe. Mỗi phản hồi của khách hàng đều 
               được chúng tôi lắng nghe và xử lý với tinh thần trách nhiệm cao nhất."
             </p>
 
             <div className="text-center">
               <div className="text-white font-bold text-xl mb-1">Giám Đốc Điều Hành</div>
-              <div className="text-gray-400">Nhà Xe Tú Linh</div>
+              <div className="text-gray-400">Nhà Xe Minh Đức</div>
             </div>
           </div>
         </AnimatedSection>
@@ -740,17 +740,17 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-4">
               <img 
                 src="/images/logo.png" 
-                alt="Nhà Xe Tú Linh" 
+                alt="Nhà Xe Minh Đức" 
                 className="h-12 w-auto object-contain"
               />
-              <h3 className="text-2xl font-bold">Nhà Xe Tú Linh</h3>
+              <h3 className="text-2xl font-bold">Nhà Xe Minh Đức</h3>
             </div>
             <p className="text-gray-300 mb-6">
               Dịch vụ xe ghép và xe riêng cao cấp, kết nối Hà Nội - Nam Định
             </p>
             <div className="flex gap-4">
               <a 
-                href="tel:0853639779" 
+                href="tel:0942193389" 
                 className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent-red transition-all duration-300 group" 
                 aria-label="Gọi điện thoại"
               >
@@ -759,7 +759,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a 
-                href="https://zalo.me/0853639779" 
+                href="https://zalo.me/0942193389" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-500 transition-all duration-300 group" 
@@ -782,7 +782,7 @@ const Footer = () => {
                 <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                <span>Hotline: 0853 639 779</span>
+                <span>Hotline: 0942 193 389</span>
               </li>
               
               <li className="flex items-start gap-2">
@@ -842,7 +842,7 @@ export default function App() {
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
         {/* Zalo Button */}
         <a
-          href="https://zalo.me/0853639779"
+          href="https://zalo.me/0942193389"
           target="_blank"
           rel="noopener noreferrer"
           className="group relative w-14 h-14 bg-blue-500 hover:bg-blue-600 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 animate-bounce"
@@ -861,7 +861,7 @@ export default function App() {
 
         {/* Phone Button */}
         <a
-          href="tel:0853639779"
+          href="tel:0942193389"
           className="group relative w-14 h-14 bg-gradient-to-br from-accent-red to-red-600 hover:from-red-600 hover:to-accent-red rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 animate-pulse"
           style={{ animationDuration: '2s' }}
           aria-label="Gọi điện"
@@ -870,7 +870,7 @@ export default function App() {
             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
           </svg>
           <span className="absolute right-full mr-3 bg-navy text-white px-4 py-2 rounded-lg text-sm font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
-            0853 639 779
+            0942 193 389
           </span>
         </a>
       </div>
