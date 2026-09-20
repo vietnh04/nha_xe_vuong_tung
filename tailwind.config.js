@@ -7,13 +7,14 @@ module.exports = {
     extend: {
       colors: {
         navy: {
-          DEFAULT: '#0A2647',
-          dark: '#051729',
-          light: '#144272',
+          DEFAULT: '#1A1D24', // Xám than chì cao cấp (Charcoal)
+          dark: '#0F1115',    // Đen Onyx sâu cho footer và commitment
+          light: '#282D37',   // Xám than nhẹ cho surface và gradient
         },
         accent: {
-          red: '#E63946',
-          orange: '#F77F00',
+          red: '#FF6B00',     // Màu cam chủ đạo theo logo
+          orange: '#FF7A00',  // Cam sáng
+          amber: '#F59E0B',   // Vàng hổ phách điểm nhấn
         }
       },
       fontFamily: {
