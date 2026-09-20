@@ -101,6 +101,7 @@ const HeroSection = () => {
     { route: "Sân bay Nội Bài ⇄ Nam Định", price: "450.000" },
     { route: "Hà Nội ⇄ Nam Định (Bao xe 5 chỗ)", price: "900.000" },
     { route: "Hà Nội ⇄ Nam Định (Bao xe 7 chỗ)", price: "1.100.000" },
+    { route: "Các chuyến khác", price: "0942 193 389", isPhone: true },
   ];
 
   return (
@@ -272,10 +273,22 @@ const HeroSection = () => {
                         </div>
                         <span className="text-gray-800 font-medium group-hover:text-navy transition-colors">{item.route}</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-accent-red font-bold text-xl group-hover:scale-110 transition-transform">{item.price}</span>
-                        <span className="text-gray-500 font-semibold">đ</span>
-                      </div>
+                      {item.isPhone ? (
+                        <a 
+                          href="tel:0942193389" 
+                          className="inline-flex items-center gap-1.5 bg-accent-red/10 text-accent-red hover:bg-accent-red hover:text-white px-3 py-1.5 rounded-lg font-bold text-sm transition-all duration-300 group-hover:scale-105"
+                        >
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                          </svg>
+                          <span>Gọi: {item.price}</span>
+                        </a>
+                      ) : (
+                        <div className="flex items-center gap-2">
+                          <span className="text-accent-red font-bold text-xl group-hover:scale-110 transition-transform">{item.price}</span>
+                          <span className="text-gray-500 font-semibold">đ</span>
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -287,8 +300,7 @@ const HeroSection = () => {
                       <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                     </svg>
                     <p className="text-sm text-amber-800 leading-relaxed">
-                      <span className="font-semibold">Lưu ý:</span> Giá có thể thay đổi vào ngày lễ, Tết. 
-                      Vui lòng liên hệ để được báo giá chính xác.
+                      <span className="font-semibold">Lưu ý:</span> Giá có thể thay đổi vào ngày lễ, Tết. Các chuyến khác vui lòng gọi SĐT <a href="tel:0942193389" className="font-bold underline text-accent-red hover:text-orange-600">0942 193 389</a> để đặt xe.
                     </p>
                   </div>
                 </div>
@@ -554,6 +566,7 @@ const DetailedPricingSection = () => {
     { route: "Sân bay Nội Bài ⇄ Nam Định", price: "450.000", type: "Xe ghép" },
     { route: "Hà Nội ⇄ Nam Định (Bao xe 5 chỗ)", price: "900.000", type: "Xe riêng" },
     { route: "Hà Nội ⇄ Nam Định (Bao xe 7 chỗ)", price: "1.100.000", type: "Xe riêng" },
+    { route: "Các chuyến khác", price: "0942 193 389", type: "Theo yêu cầu", isPhone: true },
   ];
 
   return (
@@ -607,13 +620,27 @@ const DetailedPricingSection = () => {
                         <span className={`inline-block px-4 py-1 rounded-full text-sm font-semibold ${
                           item.type === 'Xe riêng' 
                             ? 'bg-accent-orange/10 text-accent-orange' 
+                            : item.type === 'Theo yêu cầu'
+                            ? 'bg-amber-500/10 text-amber-700'
                             : 'bg-navy/10 text-navy'
                         }`}>
                           {item.type}
                         </span>
                       </div>
                       <div className="text-right">
-                        <span className="text-accent-red font-bold text-xl">{item.price}đ</span>
+                        {item.isPhone ? (
+                          <a 
+                            href="tel:0942193389" 
+                            className="inline-flex items-center gap-1.5 bg-accent-red text-white hover:bg-orange-600 px-4 py-1.5 rounded-full font-bold text-sm shadow-md shadow-accent-red/20 transition-all duration-300 hover:scale-105"
+                          >
+                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                            <span>Gọi {item.price}</span>
+                          </a>
+                        ) : (
+                          <span className="text-accent-red font-bold text-xl">{item.price}đ</span>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -627,9 +654,14 @@ const DetailedPricingSection = () => {
                     <svg className="w-6 h-6 text-accent-red flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                     </svg>
-                    <p className="text-gray-600 text-sm italic">
-                      (*) Giá có thể thay đổi vào ngày lễ, Tết. Vui lòng liên hệ để được báo giá chính xác và đặt chỗ trước.
-                    </p>
+                    <div>
+                      <p className="text-gray-600 text-sm italic">
+                        (*) Giá có thể thay đổi vào ngày lễ, Tết. Vui lòng liên hệ để được báo giá chính xác và đặt chỗ trước.
+                      </p>
+                      <p className="text-navy font-semibold text-sm mt-1">
+                        👉 Các chuyến khác vui lòng gọi SĐT <a href="tel:0942193389" className="text-accent-red font-bold hover:underline">0942 193 389</a> để được tư vấn và đặt xe nhanh chóng.
+                      </p>
+                    </div>
                   </div>
                   <a 
                     href="tel:0942193389" 
