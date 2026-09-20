@@ -1,5 +1,5 @@
 
-# Landing Page Nhà Xe Minh Khôi
+# Nhà Xe Minh Khôi
 
 Website landing page dịch vụ xe ghép/xe tiện chuyến cao cấp kết nối Hà Nội - Nam Định, được xây dựng bằng React + TailwindCSS.
 
