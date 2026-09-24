@@ -492,17 +492,6 @@ const AboutSection = () => {
   const commitments = [
     {
       id: "01",
-      title: "Không Bắt Khách Dọc Đường",
-      desc: "Cam kết chỉ đón đúng khách đã đặt trước. Xe chạy xuyên suốt lộ trình, tuyệt đối không dừng đỗ chèo kéo hay nhồi nhét thêm khách giữa đường.",
-      icon: (
-        <svg className="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-      highlight: "Ưu tiên số 1 cho sự thoải mái",
-    },
-    {
-      id: "02",
       title: "Tài Xế Chuyên Nghiệp & Lịch Sự",
       desc: "Đội ngũ tài xế dày dặn kinh nghiệm tuyến Hà Nội – Nam Định, lái xe cẩn trọng, văn minh, nhiệt tình hỗ trợ hành lý cho khách.",
       icon: (
@@ -513,7 +502,7 @@ const AboutSection = () => {
       highlight: "Thân thiện · Tận tâm",
     },
     {
-      id: "03",
+      id: "02",
       title: "Xe Đời Mới, Bảo Dưỡng Định Kỳ",
       desc: "Dàn xe VinFast VF6, VF7, VF8, VinFast Limo Green và Innova luôn trong tình trạng sạch sẽ, máy lạnh mát rượi, bảo dưỡng kỹ thuật nghiêm ngặt trước mỗi ngày chạy.",
       icon: (
@@ -524,7 +513,7 @@ const AboutSection = () => {
       highlight: "An toàn tuyệt đối 100%",
     },
     {
-      id: "04",
+      id: "03",
       title: "Giá Niêm Yết, Minh Bạch Rõ Ràng",
       desc: "Giá cước công khai trước chuyến đi. Không phát sinh phụ phí ẩn, không phụ thu bất hợp lý, thanh toán linh hoạt bằng tiền mặt hoặc chuyển khoản.",
       icon: (
