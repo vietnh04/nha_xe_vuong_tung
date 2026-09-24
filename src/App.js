@@ -474,7 +474,6 @@ const AboutSection = () => {
     {
       id: "03",
       title: "Xe Đời Mới, Bảo Dưỡng Định Kỳ",
-      desc: "Dàn xe VF8, Limousine và Innova luôn trong tình trạng sạch sẽ, máy lạnh mát rượi, bảo dưỡng kỹ thuật nghiêm ngặt trước mỗi ngày chạy.",
       desc: "Dàn xe VF8, VinFast Limo Green và Innova luôn trong tình trạng sạch sẽ, máy lạnh mát rượi, bảo dưỡng kỹ thuật nghiêm ngặt trước mỗi ngày chạy.",
       icon: (
         <svg className="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -742,7 +741,6 @@ const Footer = () => (
           </div>
           <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
             Dịch vụ xe ghép, xe riêng, đưa đón sân bay cao cấp kết nối Hà Nội ⇄ Nam Định.
-            Xe đời mới VinFast VF8, Limousine VIP và Innova, phục vụ 24/7.
             Xe đời mới VinFast VF8, VinFast Limo Green và Innova, phục vụ 24/7.
           </p>
           <div className="flex gap-3">
