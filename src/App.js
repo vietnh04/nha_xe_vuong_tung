@@ -177,6 +177,7 @@ const HeroSection = () => {
           <p className="text-slate-700 text-lg lg:text-xl leading-relaxed mb-8 max-w-xl font-medium">
             Trải nghiệm hành trình <span className="text-amber-600 font-bold">đẳng cấp & tiện nghi</span> với 3 dòng xe đời mới:
             <strong className="text-slate-900"> VinFast VF8 điện, Limousine VIP và Innova</strong>.
+            <strong className="text-slate-900"> VinFast VF8 điện, VinFast Limo Green và Innova</strong>.
             Đón trả tận nơi tuyến Hà Nội ⇄ Nam Định, cam kết đúng giờ tuyệt đối, không bắt khách dọc đường.
           </p>
 
@@ -243,6 +244,14 @@ const FleetSection = () => {
       features: ["Ghế thương gia bọc da ngả lưng", "Cổng sạc điện thoại từng ghế", "Wifi tốc độ cao miễn phí", "Nước khoáng & khăn lạnh"],
       badge: "HOT NHẤT",
       badgeColor: "from-amber-500 to-orange-600",
+      name: "VinFast Limo Green",
+      type: "MPV ĐIỆN 7 CHỖ VIP",
+      src: "/images/limo_green.png",
+      seats: "7 chỗ",
+      fuel: "Điện 100%",
+      features: ["Nội thất 7 chỗ da cao cấp", "Dẫn động thuần điện êm ái", "Sạc nhanh, tầm hoạt động 470km", "Cổng sạc, Wifi & nước mát"],
+      badge: "MỚI & HIỆN ĐẠI",
+      badgeColor: "from-emerald-500 to-teal-600",
     },
     {
       id: 2,
@@ -466,6 +475,7 @@ const AboutSection = () => {
       id: "03",
       title: "Xe Đời Mới, Bảo Dưỡng Định Kỳ",
       desc: "Dàn xe VF8, Limousine và Innova luôn trong tình trạng sạch sẽ, máy lạnh mát rượi, bảo dưỡng kỹ thuật nghiêm ngặt trước mỗi ngày chạy.",
+      desc: "Dàn xe VF8, VinFast Limo Green và Innova luôn trong tình trạng sạch sẽ, máy lạnh mát rượi, bảo dưỡng kỹ thuật nghiêm ngặt trước mỗi ngày chạy.",
       icon: (
         <svg className="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.67 2.67 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l5.654-4.654m5.083-2.413l3.03-2.496a2.67 2.67 0 00-3.774-3.774l-2.496 3.03" />
@@ -580,8 +590,8 @@ const AboutSection = () => {
 const PricingSection = () => {
   const pricingData = [
     { route: "Hà Nội ⇄ TP Nam Định", price: "250.000", type: "Xe ghép" },
-    { route: "Hà Nội ⇄ Giao Thủy", price: "260.000", type: "Xe ghép" },
-    { route: "Hà Nội ⇄ Xuân Trường", price: "260.000", type: "Xe ghép" },
+    { route: "Hà Nội ⇄ Giao Thủy", price: "250.000", type: "Xe ghép" },
+    { route: "Hà Nội ⇄ Xuân Trường", price: "250.000", type: "Xe ghép" },
     { route: "Hà Nội ⇄ Trực Ninh", price: "250.000", type: "Xe ghép" },
     { route: "Sân bay Nội Bài ⇄ Nam Định", price: "450.000", type: "Sân bay" },
     { route: "Bao xe 5 chỗ (Hà Nội ⇄ Nam Định)", price: "900.000", type: "Xe riêng" },
@@ -733,6 +743,7 @@ const Footer = () => (
           <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
             Dịch vụ xe ghép, xe riêng, đưa đón sân bay cao cấp kết nối Hà Nội ⇄ Nam Định.
             Xe đời mới VinFast VF8, Limousine VIP và Innova, phục vụ 24/7.
+            Xe đời mới VinFast VF8, VinFast Limo Green và Innova, phục vụ 24/7.
           </p>
           <div className="flex gap-3">
             <a 
