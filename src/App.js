@@ -175,8 +175,8 @@ const HeroSection = () => {
           <GoldDivider />
 
           <p className="text-slate-700 text-lg lg:text-xl leading-relaxed mb-8 max-w-xl font-medium">
-            Trải nghiệm hành trình <span className="text-amber-600 font-bold">đẳng cấp & tiện nghi</span> với 3 dòng xe đời mới:
-            <strong className="text-slate-900"> VinFast VF8 điện, VinFast Limo Green và Innova</strong>.
+            Trải nghiệm hành trình <span className="text-amber-600 font-bold">đẳng cấp & tiện nghi</span> với 5 dòng xe đời mới:
+            <strong className="text-slate-900"> VinFast VF6, VF7, VF8, VinFast Limo Green và Innova</strong>.
             Đón trả tận nơi tuyến Hà Nội ⇄ Nam Định, cam kết đúng giờ tuyệt đối, không bắt khách dọc đường.
           </p>
 
@@ -224,6 +224,28 @@ const FleetSection = () => {
   const fleet = [
     {
       id: 0,
+      name: "VinFast VF6",
+      type: "SUV ĐIỆN 5 CHỖ",
+      src: "/images/vf6.png",
+      seats: "5 chỗ",
+      fuel: "Điện 100%",
+      features: ["Nội thất hiện đại, ghế da cao cấp", "Vận hành êm ái, không mùi say xe", "Điều hòa 2 chiều làm mát sâu", "Nhỏ gọn linh hoạt, cách âm tốt"],
+      badge: "TIỆN NGHI",
+      badgeColor: "from-cyan-500 to-blue-600",
+    },
+    {
+      id: 1,
+      name: "VinFast VF7",
+      type: "SUV ĐIỆN THỂ THAO",
+      src: "/images/vf7.png",
+      seats: "5 chỗ",
+      fuel: "Điện 100%",
+      features: ["Thiết kế thể thao, nội thất sang trọng", "Khoang ngồi rộng rãi, ghế da êm ái", "Động cơ điện vận hành mượt mà", "Trang bị an toàn thông minh"],
+      badge: "THỜI THƯỢNG",
+      badgeColor: "from-purple-500 to-indigo-600",
+    },
+    {
+      id: 2,
       name: "VinFast VF8",
       type: "XE ĐIỆN CAO CẤP",
       src: "/images/vf8.png",
@@ -234,7 +256,7 @@ const FleetSection = () => {
       badgeColor: "from-emerald-500 to-green-600",
     },
     {
-      id: 1,
+      id: 3,
       name: "VinFast Limo Green",
       type: "MPV ĐIỆN 7 CHỖ VIP",
       src: "/images/limo_green.png",
@@ -245,7 +267,7 @@ const FleetSection = () => {
       badgeColor: "from-emerald-500 to-teal-600",
     },
     {
-      id: 2,
+      id: 4,
       name: "Toyota Innova",
       type: "XE GIA ĐÌNH",
       src: "/images/innova.png",
@@ -269,81 +291,109 @@ const FleetSection = () => {
           </h2>
           <GoldDivider center={true} />
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            3 dòng xe đời mới, sạch sẽ tuyệt đối, được bảo dưỡng định kỳ và kiểm tra kỹ lưỡng trước mỗi chuyến đi
+            5 dòng xe đời mới, sạch sẽ tuyệt đối, được bảo dưỡng định kỳ và kiểm tra kỹ lưỡng trước mỗi chuyến đi
           </p>
         </AnimatedSection>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {fleet.map((car, index) => (
-            <AnimatedSection key={car.id} delay={index * 150}>
-              <div
-                className={`group relative rounded-3xl overflow-hidden border transition-all duration-500 cursor-pointer bg-white
-                  ${activeCard === car.id
-                    ? 'border-amber-400 shadow-2xl shadow-amber-500/15 scale-[1.02]'
-                    : 'border-slate-200/90 shadow-lg hover:border-amber-300 hover:shadow-xl'
-                  }`}
-                onMouseEnter={() => setActiveCard(car.id)}
-                onMouseLeave={() => setActiveCard(null)}
-              >
-                <div className={`absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-white text-xs font-black tracking-wider bg-gradient-to-r ${car.badgeColor} shadow-md`}>
-                  {car.badge}
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+          {fleet.map((car, index) => {
+            const gridClass = index < 3 
+              ? "lg:col-span-2" 
+              : index === 3 
+                ? "lg:col-span-2 lg:col-start-2" 
+                : "lg:col-span-2";
+            const mdClass = index === 4 ? "md:col-span-2 md:max-w-md md:mx-auto lg:max-w-none lg:mx-0" : "";
 
-                <div className="relative h-60 overflow-hidden bg-slate-900">
-                  <img 
-                    src={car.src} 
-                    alt={car.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-3 right-3">
-                    <span className="text-xs font-bold text-white tracking-wider bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20">
-                      {car.type}
-                    </span>
+            return (
+              <AnimatedSection key={car.id} delay={index * 120} className={`${gridClass} ${mdClass}`}>
+                <div
+                  className={`group relative rounded-3xl overflow-hidden border transition-all duration-500 bg-white h-full flex flex-col
+                    ${activeCard === car.id
+                      ? 'border-amber-400 shadow-2xl shadow-amber-500/15 scale-[1.02]'
+                      : 'border-slate-200/90 shadow-lg hover:border-amber-300 hover:shadow-xl'
+                    }`}
+                  onMouseEnter={() => setActiveCard(car.id)}
+                  onMouseLeave={() => setActiveCard(null)}
+                >
+                  <div className={`absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-white text-xs font-black tracking-wider bg-gradient-to-r ${car.badgeColor} shadow-md`}>
+                    {car.badge}
                   </div>
-                </div>
 
-                <div className="p-6">
-                  <h3 className="text-2xl font-black text-slate-900 mb-2">{car.name}</h3>
-
-                  <div className="flex gap-4 mb-4 pb-4 border-b border-slate-100">
-                    <div className="flex items-center gap-1.5 text-slate-600 text-sm font-medium">
-                      <svg className="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
-                      </svg>
-                      {car.seats}
-                    </div>
-                    <div className="flex items-center gap-1.5 text-slate-600 text-sm font-medium">
-                      <svg className="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-                      </svg>
-                      {car.fuel}
+                  <div className="relative h-60 overflow-hidden bg-slate-900">
+                    <img 
+                      src={car.src} 
+                      alt={car.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-3 right-3">
+                      <span className="text-xs font-bold text-white tracking-wider bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20">
+                        {car.type}
+                      </span>
                     </div>
                   </div>
 
-                  <div className="space-y-2 mb-6">
-                    {car.features.map((f, i) => (
-                      <div key={i} className="flex items-center gap-2 text-sm text-slate-600">
-                        <div className="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0"></div>
-                        {f}
+                  <div className="p-6 flex flex-col flex-1">
+                    <h3 className="text-2xl font-black text-slate-900 mb-2">{car.name}</h3>
+
+                    <div className="flex gap-4 mb-4 pb-4 border-b border-slate-100">
+                      <div className="flex items-center gap-1.5 text-slate-600 text-sm font-medium">
+                        <svg className="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                        </svg>
+                        {car.seats}
                       </div>
-                    ))}
-                  </div>
+                      <div className="flex items-center gap-1.5 text-slate-600 text-sm font-medium">
+                        <svg className="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                        </svg>
+                        {car.fuel}
+                      </div>
+                    </div>
 
-                  <a 
-                    href={`tel:${PHONE}`}
-                    className="flex items-center justify-center gap-2 w-full py-3.5 rounded-2xl bg-amber-50 hover:bg-amber-500 border border-amber-300 hover:border-amber-500 text-amber-800 hover:text-white font-bold text-sm transition-all duration-300 shadow-sm"
-                  >
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                    </svg>
-                    Đặt Dòng Xe Này
-                  </a>
+                    <div className="space-y-2.5">
+                      {car.features.map((f, i) => (
+                        <div key={i} className="flex items-center gap-2 text-sm text-slate-600">
+                          <div className="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0"></div>
+                          {f}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </AnimatedSection>
-          ))}
+              </AnimatedSection>
+            );
+          })}
         </div>
+
+        {/* Nút Liên hệ + SĐT ở dưới 5 dòng xe */}
+        <AnimatedSection delay={200} className="mt-14 text-center">
+          <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-4 bg-amber-50/80 border border-amber-200/80 px-8 py-5 rounded-3xl shadow-sm">
+            <span className="text-slate-800 font-bold text-base sm:text-lg">
+              Liên hệ đặt xe nhanh chóng 24/7:
+            </span>
+            <div className="flex items-center gap-3">
+              <a 
+                href={`tel:${PHONE}`}
+                className="group flex items-center gap-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-7 py-3.5 rounded-full font-black text-base sm:text-lg shadow-lg shadow-amber-500/25 hover:scale-105 transition-all duration-300"
+              >
+                <svg className="w-5 h-5 animate-bounce" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                <span>Liên Hệ: {PHONE_DISPLAY}</span>
+              </a>
+              <a 
+                href={`https://zalo.me/${PHONE}`}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 px-5 py-3.5 rounded-full font-bold text-base shadow-sm hover:shadow transition-all duration-300 hover:scale-105"
+              >
+                <img src="/images/zalo_logo.png" alt="Zalo" className="w-5 h-5" />
+                <span>Zalo</span>
+              </a>
+            </div>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );
@@ -465,7 +515,7 @@ const AboutSection = () => {
     {
       id: "03",
       title: "Xe Đời Mới, Bảo Dưỡng Định Kỳ",
-      desc: "Dàn xe VF8, VinFast Limo Green và Innova luôn trong tình trạng sạch sẽ, máy lạnh mát rượi, bảo dưỡng kỹ thuật nghiêm ngặt trước mỗi ngày chạy.",
+      desc: "Dàn xe VinFast VF6, VF7, VF8, VinFast Limo Green và Innova luôn trong tình trạng sạch sẽ, máy lạnh mát rượi, bảo dưỡng kỹ thuật nghiêm ngặt trước mỗi ngày chạy.",
       icon: (
         <svg className="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.67 2.67 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l5.654-4.654m5.083-2.413l3.03-2.496a2.67 2.67 0 00-3.774-3.774l-2.496 3.03" />
@@ -732,7 +782,7 @@ const Footer = () => (
           </div>
           <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
             Dịch vụ xe ghép, xe riêng, đưa đón sân bay cao cấp kết nối Hà Nội ⇄ Nam Định.
-            Xe đời mới VinFast VF8, VinFast Limo Green và Innova, phục vụ 24/7.
+            Xe đời mới VinFast VF6, VF7, VF8, VinFast Limo Green và Innova, phục vụ 24/7.
           </p>
           <div className="flex gap-3">
             <a 
