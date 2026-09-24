@@ -176,7 +176,6 @@ const HeroSection = () => {
 
           <p className="text-slate-700 text-lg lg:text-xl leading-relaxed mb-8 max-w-xl font-medium">
             Trải nghiệm hành trình <span className="text-amber-600 font-bold">đẳng cấp & tiện nghi</span> với 3 dòng xe đời mới:
-            <strong className="text-slate-900"> VinFast VF8 điện, Limousine VIP và Innova</strong>.
             <strong className="text-slate-900"> VinFast VF8 điện, VinFast Limo Green và Innova</strong>.
             Đón trả tận nơi tuyến Hà Nội ⇄ Nam Định, cam kết đúng giờ tuyệt đối, không bắt khách dọc đường.
           </p>
