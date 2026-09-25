@@ -177,7 +177,7 @@ const HeroSection = () => {
           <p className="text-slate-700 text-lg lg:text-xl leading-relaxed mb-8 max-w-xl font-medium">
             Trải nghiệm hành trình <span className="text-amber-600 font-bold">đẳng cấp & tiện nghi</span> với 5 dòng xe đời mới:
             <strong className="text-slate-900"> VinFast VF6, VF7, VF8, VinFast Limo Green và Innova</strong>.
-            Đón trả tận nơi tuyến Hà Nội ⇄ Nam Định, cam kết đúng giờ tuyệt đối, không bắt khách dọc đường.
+            Đón trả tận nơi tuyến Nam Định - Hà Nội - Nam Định, cam kết xe đời mới sạch sẽ, lái xe nhiệt tình chu đáo.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-14">
